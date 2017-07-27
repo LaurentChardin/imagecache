@@ -68,13 +68,14 @@ class ImageCache
 
             if (is_a($cache, 'Illuminate\Cache\CacheManager')) {
 
-                // add laravel cache
-                $this->cache = $cache;
-
-                // change cache store if set
+                // Change cache store if set
                 $cacheStore = $app->config->get('imagecache.cache-store', null);
                 if(!is_null($cacheStore)) {
-                    $cache = $cache->store($cacheStore);
+                    $this->cache = $cache->store($cacheStore);
+                }
+                else {
+                    // add default laravel cache
+                    $this->cache = $cache;
                 }
 
             } else {
