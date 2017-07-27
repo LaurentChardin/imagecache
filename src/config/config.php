@@ -68,4 +68,15 @@ return array(
    
     'lifetime' => 43200,
 
+    /*
+    |--------------------------------------------------------------------------
+    | Image Cache Store
+    |--------------------------------------------------------------------------
+    |
+    | Here you may use different cache store than app default cache store
+    | set Null to use default cache store
+    | example : 'redis', 'file'
+    |
+    */
+    'cache-store' => null,
 );
