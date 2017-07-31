@@ -78,5 +78,5 @@ return array(
     | example : 'redis', 'file'
     |
     */
-    'cache-store' => null,
+    'cache-store' => env('IMAGE_CACHE_STORE', null),
 );
