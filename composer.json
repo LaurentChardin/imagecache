@@ -1,5 +1,5 @@
 {
-    "name": "intervention/imagecache",
+    "name": "holidaywatchdog/imagecache",
     "description": "Caching extension for the Intervention Image Class",
     "homepage": "http://image.intervention.io",
     "keywords": ["image", "gd", "imagick", "laravel", "cache"],
