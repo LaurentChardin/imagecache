@@ -70,13 +70,13 @@ return array(
 
     /*
     |--------------------------------------------------------------------------
-    | Image Cache Store
+    | Image Cache Driver
     |--------------------------------------------------------------------------
     |
-    | Here you may use different cache store than app default cache store
+    | Here you may use different cache driver than app default cache
     | set Null to use default cache store
     | example : 'redis', 'file'
     |
     */
-    'cache-store' => null,
+    'cache_driver' => null,
 );

@@ -68,15 +68,9 @@ class ImageCache
 
             if (is_a($cache, 'Illuminate\Cache\CacheManager')) {
 
-                // Change cache store if set
-                $cacheStore = $app->config->get('imagecache.cache-store', null);
-                if(!is_null($cacheStore)) {
-                    $this->cache = $cache->store($cacheStore);
-                }
-                else {
-                    // add default laravel cache
-                    $this->cache = $cache;
-                }
+                // Add laravel cache and set custom cache_driver if persist
+                $cache_driver = config('imagecache.cache_driver');
+                $this->cache = $cache_driver ? $cache->driver($cache_driver) : $cache;
 
             } else {
                     
